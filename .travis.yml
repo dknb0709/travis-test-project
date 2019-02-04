@@ -1,0 +1,19 @@
+language: cpp
+
+install:
+  - cd ..
+  - git clone -b master --depth 1 https://github.com/dknb0709/travis-test-project.git root
+  - cd root
+  - export ROOT="`pwd`"
+  - rm -rf bin
+  - mkdir bin
+  - cp -r $TRAVIS_BUILD_DIR/* bin
+
+script:
+  - build-and-test.sh
+
+notifications:
+  email:
+    false
+
+
