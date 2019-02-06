@@ -1,7 +1,7 @@
-add_library(travis-test-project
+add_library(sample
   SHARED
     sample.cpp
   )
-target_include_directories(travis-test-project
+target_include_directories(sample
     PUBLIC ${PROJECT_SOURCE_DIR}/include
   )

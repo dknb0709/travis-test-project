@@ -17,7 +17,7 @@ function build()
 
 function run-tests()
 {
-  find "$1" -name "$2" -print0 | while read -d $'\0' f
+  find "$1" -name "test_*.out" -print0 | while read -d $'\0' f
   do
     "$f"
   done
@@ -25,5 +25,5 @@ function run-tests()
 
 build
 
-run-tests $BIN_DIR test_runner.out
+run-tests $BUILD_DIR
 
