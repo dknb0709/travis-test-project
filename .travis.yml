@@ -1,8 +1,10 @@
 language: cpp
 
 install:
+  - pwd
   - cd ..
   - git clone -b master --depth 1 https://github.com/dknb0709/travis-test-project.git root
+  - ls root
   - cd root
   - export ROOT="`pwd`"
 
