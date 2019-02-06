@@ -1,6 +1,8 @@
 #!bin/bash
 
-BIN_DIR="$ROOT/bin/test"
+ROOT=`pwd`
+
+BIN_DIR="$ROOT/build/test"
 INC_DIR="$ROOT/include"
 
 function run-tests()
@@ -11,5 +13,5 @@ function run-tests()
   done
 }
 
-run-tests $BIN_DIR fat-test
+run-tests $BIN_DIR test.out
 

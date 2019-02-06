@@ -1,4 +1,4 @@
-add_executable(a.out test.cpp)
+add_executable(test.out test.cpp)
 
-target_link_libraries(a.out sample)
+target_link_libraries(test.out sample)
 
