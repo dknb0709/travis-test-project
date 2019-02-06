@@ -23,18 +23,7 @@ function run-tests()
   done
 }
 
-function show_coverage()
-{
-  cd $BIN_DIR/test
-  gcov ../../src/*.cpp --object-directory ../src/CMakeFiles/travis-test-project.dir/
-  find . -name "*.cpp.gcov" -print0 | while read -d $'\0' f
-  do
-    cat "$f"
-  done
-}
-
 build
 
 run-tests $BIN_DIR test.out
 
-show_coverage

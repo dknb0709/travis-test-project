@@ -1,5 +1,8 @@
 language: cpp
 
+before-install:
+  - sudo pip install codecov
+
 install:
   - pwd
   - cd ..
@@ -10,6 +13,9 @@ install:
 
 script:
   - ./build-and-test.sh
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
 
 notifications:
   email:
