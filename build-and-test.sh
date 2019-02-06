@@ -2,14 +2,14 @@
 
 ROOT=`pwd`
 
-BIN_DIR="$ROOT/build"
+BUILD_DIR="$ROOT/build"
 INC_DIR="$ROOT/include"
 
 function build()
 {
   echo build start [$ROOT]
-  rm -rf $BIN_DIR
-  mkdir $BIN_DIR && cd $BIN_DIR
+  rm -rf $BUILD_DIR
+  mkdir $BUILD_DIR && cd $BUILD_DIR
   cmake .. -DBUILD_TYPE=coverage
   make
   echo build finish
@@ -25,5 +25,5 @@ function run-tests()
 
 build
 
-run-tests $BIN_DIR test.out
+run-tests $BIN_DIR test_runner.out
 
