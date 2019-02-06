@@ -9,7 +9,7 @@ install:
   - export ROOT="`pwd`"
 
 script:
-  - build-and-test.sh
+  - ./build-and-test.sh
 
 notifications:
   email:
